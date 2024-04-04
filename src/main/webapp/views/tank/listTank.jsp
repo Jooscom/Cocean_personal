@@ -7,8 +7,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Cocean</title> 
 <!-- icon-->
-<link
-	href="<c:url value='/resource/vendor/fontawesome-free/css/all.min.css'/>" rel="stylesheet" type="text/css">
 <link rel="icon" href="<c:url value='/resource/img/favi.png'/>"
 	type="image/x-icon">
 <!-- Custom styles template-->
@@ -324,10 +322,7 @@
             </div>
         </div>
     </div>
-<script src="<c:url value='/resource/vendor/jquery/jquery.min.js'/>"></script>
-<script	src="<c:url value='/resource/vendor/bootstrap/js/bootstrap.bundle.min.js'/>"></script>
-<script src="<c:url value='/resource/vendor/jquery-easing/jquery.easing.min.js'/>"></script>
-<script src="<c:url value='/resource/js/sb-admin-2.min.js'/>"></script>
+
 </body>
 
 </html>

@@ -180,7 +180,6 @@ $(".p").click(function() {
 		})
 	}
 
-	resizeWidth();
 	
 	
 

@@ -320,13 +320,13 @@
 <%-- 					<c:import url="/personnel/organization/1"/> --%>
 <!-- 				</div> -->
 <!-- 			</div> -->
-<!-- 		</div> --><
-!-- 	</div> -->
+<!-- 		</div> -->
+<!-- 	</div> -->
 	
 	
 <%-- <script src="<c:url value='/resource/vendor/jquery/jquery.min.js'/>"></script> --%>
 <script	src="<c:url value='/resource/vendor/bootstrap/js/bootstrap.bundle.min.js'/>"></script>
-<script src="<c:url value='/resource/vendor/jquery-easing/jquery.easing.min.js'/>"></script>
+<%-- <script src="<c:url value='/resource/vendor/jquery-easing/jquery.easing.min.js'/>"></script> --%>
 <script src="<c:url value='/resource/js/sb-admin-2.min.js'/>"></script>
 
 
@@ -360,7 +360,7 @@ function logoutConfirm() {
 	
 	$('#sidebarToggle').on('click',function(){
 		var width = $('#accordionSidebar').width();
-		console.log(width);
+		//console.log(width);
 		if(width <= 150){
 			$('.contentField').css({'padding-left':'130px'});
 			$('#accordionSidebar').css({'overflow-y':'clip'});
