@@ -92,12 +92,7 @@ public class LoginController {
 	@GetMapping(value = "/mypage/logout")
 	public String logout(HttpSession session, HttpServletRequest req, RedirectAttributes rAttr) {
 	session.removeAttribute("userInfo");
-	String ctx = req.getContextPath();
-	logger.info("ctx : "+ctx);
-	String page = "redirect:"+ctx;
-	logger.info("logout return page : "+page);
-	//mav.addObject("msg", "로그아웃되었습니다");
-	//rAttr.addAttribute("msg", "로그아웃되었습니다");
+	rAttr.addAttribute("msg", "로그아웃되었습니다");
 	return "redirect:/";
 	}
 

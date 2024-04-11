@@ -21,24 +21,23 @@ public class SseService {
 
 	public static String ctx;
 
-	public static Map<Long, SseEmitter> sseEmitters = new ConcurrentHashMap<>();
+	public static Map<Long, SseEmitter> sseMap = new ConcurrentHashMap<>();
 
 	public SseEmitter subscribe(long ID) {
 
 		SseEmitter emitter = new SseEmitter(Long.MAX_VALUE);
 
 		try {
-			logger.info("sseEmitters : {}",sseEmitters);
+			logger.info("sseEmitters : {}",sseMap);
 			emitter.send(SseEmitter.event().name("connect").data("connect success"));
+			sseMap.put(ID, emitter);
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
 
-		sseEmitters.put(ID, emitter);
-
-		emitter.onCompletion(() -> sseEmitters.remove(ID));
-		emitter.onTimeout(() -> sseEmitters.remove(ID));
-		emitter.onError((e) -> sseEmitters.remove(ID));
+		emitter.onCompletion(() -> sseMap.remove(ID));
+		emitter.onTimeout(() -> sseMap.remove(ID));
+		emitter.onError((e) -> sseMap.remove(ID));
 
 		return emitter;
 	}
@@ -53,13 +52,13 @@ public class SseService {
 		msg += "</a>";
 
 
-		if(sseEmitters.containsKey(ID)) {
-			SseEmitter emitter = sseEmitters.get(ID);
+		if(sseMap.containsKey(ID)) {
+			SseEmitter emitter = sseMap.get(ID);
 			try {
 				emitter.send(SseEmitter.event().name("alarm").data(msg));
 			} catch (IOException e) {
 				e.printStackTrace();
-				sseEmitters.remove(ID);
+				sseMap.remove(ID);
 			}
 		}
 

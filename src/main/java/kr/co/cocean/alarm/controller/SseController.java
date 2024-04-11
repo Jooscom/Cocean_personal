@@ -17,13 +17,11 @@ public class SseController {
 	@Autowired SseService service;
 
 	@GetMapping(value = "/sse/subscibe/{employeeID}")
-	public SseEmitter subscribe(@PathVariable int employeeID, HttpServletRequest req, HttpSession session) {
+	public SseEmitter subscribe(@PathVariable int employeeID, HttpServletRequest req) {
 		String ctx = req.getContextPath();
 		SseService.ctx = ctx;
-		session.setAttribute("ctx", ctx);
 		long ID = employeeID;
 		SseEmitter emitter = service.subscribe(ID);
-
 		return emitter;
 	}
 

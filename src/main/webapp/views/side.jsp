@@ -470,16 +470,14 @@ function logoutConfirm() {
 		});
 	}
 	
-	
-	var currentPathName = location.pathname;
-	var currentAction = currentPathName.split('/')[2];
-	if(currentPathName == 'board'){
+	var currentAction =location.pathname.split('/')[2];
+	if(currentAction == 'board'){
 		$('#board-click').click();
-	}else if(currentPathName == 'approval'){
+	}else if(currentAction == 'approval'){
 		$('#approval-click').click();
-	}else if(currentPathName == 'personnel'){
+	}else if(currentAction == 'personnel'){
 		$('#personnel-click').click();
-	}else if(currentPathName == 'store'){
+	}else if(currentAction == 'store'){
 		$('#store-click').click();
 	}
 	
