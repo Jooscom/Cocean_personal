@@ -80,6 +80,31 @@
     </style>
 </head>
     <body>
+        <div id="loginInfo">
+    		<h4>로그인 정보</h4>
+    		<table>
+    			<tr>
+    				<th>담당 업무</th>
+    				<th>사번</th>
+    				<th>비밀번호</th>
+    			</tr>
+    			<tr>
+    				<th>1</th>
+    				<th>1</th>
+    				<th>1</th>
+    			</tr>
+    			<tr>
+    				<th>인사관리</th>
+    				<th>240001</th>
+    				<th>cocean1111</th>
+    			</tr>
+    			<tr>
+    				<th>1</th>
+    				<th>1</th>
+    				<th>1</th>
+    			</tr>
+    		</table>
+    	</div>
         <div id="loginBox">
             <form action="logingo" method="post">
                 <div data-mdb-input-init class="form-outline mb-4">

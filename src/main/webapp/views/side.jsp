@@ -423,7 +423,8 @@ function logoutConfirm() {
 		}else{
 			dropdown += '<div class="heightcontrol">';
 			for(var i = 0; i < list.length; i++){
-				
+				var currentPath = location.pathname.split('/')[1];
+				currentPath = currentPath == 'Cocean' ? '/Cocean' : '';
 				var con = '<div class="dropdown-item d-flex align-items-center"><div class="mr-3">';
 
 				if(list[i].url.includes('/approval')){
@@ -435,7 +436,7 @@ function logoutConfirm() {
 				}
 				
 				con += '</i></div></div><div class="alarmclick mr-5" style="width: 100%" onclick="location.href=\'';
-				con += list[i].url+'\'"><div class="small text-gray-500">';
+				con += currentPath+list[i].url+'\'"><div class="small text-gray-500">';
 				con += list[i].notificationTime;
 				con += '</div><div>';
 				con += list[i].content;
