@@ -26,9 +26,9 @@
 <br/>
 
 >## 아키텍처
-
+![cocean_ac](https://github.com/Jooscom/Cocean_personal/assets/136825137/44b78fdd-55b9-4d44-94f5-95963de6ed33)
 <br/>
 
 >## ERD
-
+![erd](https://github.com/Jooscom/Cocean_personal/assets/136825137/8e60f519-95da-4bd6-ac3e-da9bb2724209)
 <br/>
